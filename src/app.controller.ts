@@ -9,7 +9,6 @@ export class AppController {
   @Post()
   extractJsonData(@Body() request: Record<string, any>): Record<string, any> {
     const base64Image = R.prop('imageBase64', request);
-    console.log('Base 64 IMage: ', base64Image);
     return this.appService.extractJsonData(base64Image);
   }
 }
